@@ -24,4 +24,4 @@ jobs:
           token: ${{ secrets.REPLICATE_CLI_AUTH_TOKEN }}
 
       - name: Push to Replicate
-        run: cog push r8.im/TUO_USERNAME/seedvr2
+        run: cog push r8.im/albertoziveri/seedvr
