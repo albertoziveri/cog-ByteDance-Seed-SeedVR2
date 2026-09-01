@@ -1,16 +1,15 @@
-name: Push to Replicate
+name: Push SeedVR2 to Replicate
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   push_to_replicate:
     name: Push to Replicate
     runs-on: ubuntu-latest
+
     steps:
-      - name: Free disk pace
+      - name: Free disk space
         uses: jlumbroso/free-disk-space@v1.3.1
         with:
           tool-cache: false
@@ -24,9 +23,5 @@ jobs:
         with:
           token: ${{ secrets.REPLICATE_CLI_AUTH_TOKEN }}
 
-      - name: cog login
-        run: |
-          echo ${{ secrets.COG_TOKEN }} | cog login --token-stdin
-          
       - name: Push to Replicate
-        run: cog push r8.im/${{ inputs.model_name || vars.DEFAULT_MODEL_NAME }}
+        run: cog push r8.im/TUO_USERNAME/seedvr2
