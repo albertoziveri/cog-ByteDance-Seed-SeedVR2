@@ -7,3 +7,4 @@ rotary-embedding-torch==0.8.9   # Rotary positional embedding
 torchvision==0.22.0
 mediapy==1.2.0                  # Notebook Visualization
 huggingface_hub>=0.20.0        # HuggingFace Hub for model downloads
+av
